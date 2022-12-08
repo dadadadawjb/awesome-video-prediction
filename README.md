@@ -29,7 +29,7 @@ A curated list of awesome video prediction papers with brief summary.
 * **Predictive Coding Network** (**PredNet**) | [Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning](https://arxiv.org/abs/1605.08104) | Arxiv 2016 Harvard
   * unsupervised learning representation | stacked multi-level encode representation and decode reconstruction variant, convLSTM | no inductive bias, raw pixels
 
-* **Beyond Mean Square Error** (**BeyondMSE**) | [Deep multi-scale video prediction beyond mean square error]([[1511.05440\] Deep multi-scale video prediction beyond mean square error (arxiv.org)](https://arxiv.org/abs/1511.05440)) | ICLR 2016 FAIR NYU (Yann LeCun)
+* **Beyond Mean Square Error** (**BeyondMSE**) | [Deep multi-scale video prediction beyond mean square error](https://arxiv.org/abs/1511.05440) | ICLR 2016 FAIR NYU (Yann LeCun)
   * deal with blur | adversarial loss + gradient difference loss, CNN+GAN | no inductive bias, raw pixels
 
 * **Predictive Recurrent Neural Network** (**PredRNN**) | [PredRNN: A Recurrent Neural Network for Spatiotemporal Predictive Learning](https://arxiv.org/abs/2103.09504) | NeurIPS 2017 TPAMI 2022 Tsinghua (Yunbo Wang)
