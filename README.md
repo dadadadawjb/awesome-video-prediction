@@ -15,7 +15,7 @@ A curated list of awesome video prediction papers with brief summary.
 
 ## Papers
 * **Baseline Video Language Modeling** (**BVLM**) | [Video (language) modeling: a baseline for generative models of natural videos](https://arxiv.org/abs/1412.6604) | Arxiv 2014 FAIR NYU
-  * first video prediction | patch-level language model, recurrent CNN | no inductive bias, raw pixels
+  * first video prediction | patch-level language model, CNN+RNN | no inductive bias, raw pixels
 
 * **LSTM Encoder-Decoder** (**LSTM-ED**) | [Unsupervised Learning of Video Representations using LSTMs](https://arxiv.org/abs/1502.04681) | ICML 2015
   * unsupervised learning representation | LSTM encoder into representation and LSTM decoder to reconstruct, FC-LSTM | no inductive bias, raw pixels
@@ -38,10 +38,10 @@ A curated list of awesome video prediction papers with brief summary.
 * **Improved Predictive Recurrent Neural Network** (**PredRNN++**) | [PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning](https://arxiv.org/abs/1804.06300) | ICML 2018 Tsinghua (Yunbo Wang)
   * deeper in time and deep-in-time RNN vanishing gradient | causal LSTM + gradient highway unit, convLSTM | no inductive bias, raw pixels
 
-* **Eidetic 3D LSTM** (**E3D-LSTM**) | [Eidetic 3D LSTM: A Model for Video Prediction and Beyond](https://openreview.net/forum?id=B1lKS2AqtX) | ICLR 2019 Tsinghua (Yunbo Wang, Fei-Fei Li)
+* **Eidetic 3D LSTM** (**E3D-LSTM**) | [Eidetic 3D LSTM: A Model for Video Prediction and Beyond](https://openreview.net/forum?id=B1lKS2AqtX) | ICLR 2019 Tsinghua (Yunbo Wang, Li Fei-Fei)
   * learn good for both short-term and long-term | 3D CNN for local dynamics and recurrent modeling for temporal dependencies, 3D CNN+LSTM | no inductive bias, raw pixels
 
-* ★ **Convolutional Dynamic Neural Advection** (**CNDA**) | [Unsupervised Learning for Physical Interaction through Video Prediction](https://arxiv.org/abs/1605.07157) | NeurIPS 2016 UCBerkeley (Chelsea Finn, Ian Goodfellow, Sergey Levine)
+* ★ **Convolutional Dynamic Neural Advection** (**CDNA**) | [Unsupervised Learning for Physical Interaction through Video Prediction](https://arxiv.org/abs/1605.07157) | NeurIPS 2016 UCBerkeley (Chelsea Finn, Ian Goodfellow, Sergey Levine)
   * first real-world video long-range prediction | explicitly model pixel motion then merge previous frame, convLSTM | kernel-based transformation
 
 * **Object-centric Transformation** (**ObjectTransformation**) | [Learning Object-Centric Transformation for Video Prediction](https://dl.acm.org/doi/10.1145/3123266.3123349) | ACM-MM 2017 PKU
