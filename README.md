@@ -14,13 +14,18 @@ A curated list of awesome video prediction papers with brief summary.
 * [Deep Learning for Vision-based Prediction: A Survey](https://arxiv.org/abs/2007.00095) | Arxiv 2020
 
 ## Papers
+![Family Tree](assets/tree1.png)
+![Family Tree](assets/tree2.png)
+![Family Tree](assets/tree3.png)
+![Family Tree](assets/tree4.png)
+
 * **Baseline Video Language Modeling** (**BVLM**) | [Video (language) modeling: a baseline for generative models of natural videos](https://arxiv.org/abs/1412.6604) | Arxiv 2014 FAIR NYU
   * first video prediction | patch-level language model, CNN+RNN | no inductive bias, raw pixels
 
 * **LSTM Encoder-Decoder** (**LSTM-ED**) | [Unsupervised Learning of Video Representations using LSTMs](https://arxiv.org/abs/1502.04681) | ICML 2015
   * unsupervised learning representation | LSTM encoder into representation and LSTM decoder to reconstruct, FC-LSTM | no inductive bias, raw pixels
 
-* **Convolutional LSTM** (**ConvLSTM**) | [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting](https://arxiv.org/abs/1506.04214) | NeurIPS 2015 HKUST
+* ★ **Convolutional LSTM** (**ConvLSTM**) | [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting](https://arxiv.org/abs/1506.04214) | NeurIPS 2015 HKUST
   * model well spatial correlations | just modified to convLSTM as LSTM-ED, convLSTM | no inductive bias, raw pixels
 
 * **Predictive Generative Network** (**PGN**) | [Unsupervised learning of visual structure using predictive generative networks](https://arxiv.org/abs/1511.06380) | Arxiv 2015 Harvard
@@ -29,17 +34,11 @@ A curated list of awesome video prediction papers with brief summary.
 * **Predictive Coding Network** (**PredNet**) | [Deep Predictive Coding Networks for Video Prediction and Unsupervised Learning](https://arxiv.org/abs/1605.08104) | Arxiv 2016 Harvard
   * unsupervised learning representation | stacked multi-level encode representation and decode reconstruction variant, convLSTM | no inductive bias, raw pixels
 
-* **Beyond Mean Square Error** (**BeyondMSE**) | [Deep multi-scale video prediction beyond mean square error](https://arxiv.org/abs/1511.05440) | ICLR 2016 FAIR NYU (Yann LeCun)
-  * deal with blur | adversarial loss + gradient difference loss, CNN+GAN | no inductive bias, raw pixels
-
 * **Predictive Recurrent Neural Network** (**PredRNN**) | [PredRNN: A Recurrent Neural Network for Spatiotemporal Predictive Learning](https://arxiv.org/abs/2103.09504) | NeurIPS 2017 TPAMI 2022 Tsinghua (Yunbo Wang)
   * solve several problems in design of convLSTM for spatiotemporal predictive learning | spatiotemporal memory flow + spatiotemporal LSTM + reverse scheduled sampling curriculum learning, convLSTM | no inductive bias, raw pixels
 
 * **Improved Predictive Recurrent Neural Network** (**PredRNN++**) | [PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning](https://arxiv.org/abs/1804.06300) | ICML 2018 Tsinghua (Yunbo Wang)
   * deeper in time and deep-in-time RNN vanishing gradient | causal LSTM + gradient highway unit, convLSTM | no inductive bias, raw pixels
-
-* **Eidetic 3D LSTM** (**E3D-LSTM**) | [Eidetic 3D LSTM: A Model for Video Prediction and Beyond](https://openreview.net/forum?id=B1lKS2AqtX) | ICLR 2019 Tsinghua (Yunbo Wang, Li Fei-Fei)
-  * learn good for both short-term and long-term | 3D CNN for local dynamics and recurrent modeling for temporal dependencies, 3D CNN+LSTM | no inductive bias, raw pixels
 
 * ★ **Convolutional Dynamic Neural Advection** (**CDNA**) | [Unsupervised Learning for Physical Interaction through Video Prediction](https://arxiv.org/abs/1605.07157) | NeurIPS 2016 UCBerkeley (Chelsea Finn, Ian Goodfellow, Sergey Levine)
   * first real-world video long-range prediction | explicitly model pixel motion then merge previous frame, convLSTM | kernel-based transformation
@@ -56,7 +55,7 @@ A curated list of awesome video prediction papers with brief summary.
 * **Decompositional Disentangled Predictive Auto-Encoder** (**DDPAE**) | [Learning to Decompose and Disentangle Representations for Video Prediction](https://arxiv.org/abs/1806.04166) | NeurIPS 2018 Stanford (Li Fei-Fei)
   * deal with high-dimentionality | decompose whole frame to different components and disentangle each component to time-invariant content and low-dimensionality pose, CNN+RNN+VAE | vector-based transformation + motion and content separation
 
-* ★ **Spatial-Temporal Multi-Frequency Analysis Network** (**STMANet**) | [Exploring Spatial-Temporal Multi-Frequency Analysis for High-Fidelity and Temporal-Consistency Video Prediction](https://arxiv.org/abs/2002.09905) | CVPR 2020 CAS
+* ★ **Spatial-Temporal Multi-Frequency Analysis Network** (**STMFANet**) | [Exploring Spatial-Temporal Multi-Frequency Analysis for High-Fidelity and Temporal-Consistency Video Prediction](https://arxiv.org/abs/2002.09905) | CVPR 2020 CAS
   * deal with image distortion and temporal inconsistency | merge multi-level both spatial and temporal wavelet analysis into prediction, CNN+LSTM+wavelet | add traditional CV, raw pixels
 
 * ★ **Stochastic Variational Video Prediction** (**SV2P**) | [Stochastic Variational Video Prediction](https://arxiv.org/abs/1710.11252) | ICLR 2018 UIUC (Chelsea Finn, Sergey Levine)
@@ -74,10 +73,19 @@ A curated list of awesome video prediction papers with brief summary.
 * **Greedy Hierarchical Variational Auto-Encoders** (**GHVAE**) | [Greedy Hierarchical Variational Autoencoders for Large-Scale Video Prediction](https://arxiv.org/abs/2103.04174) | CVPR 2021 Stanford (Li Fei-Fei, Chelsea Finn)
   * deal with memory constraints and optimization instability problems for hierarchical VAE | greedy and modular optimization, CNN+RNN+VAE | VAE hierarchical stochastic
 
-* **Video Diffusion Models** (**VDM**) | [Video Diffusion Models](https://arxiv.org/abs/2204.03458) | Arxiv 2022 Google (Jonathan Ho)
+* **Beyond Mean Square Error** (**BeyondMSE**) | [Deep multi-scale video prediction beyond mean square error](https://arxiv.org/abs/1511.05440) | ICLR 2016 FAIR NYU (Yann LeCun)
+  * deal with blur | adversarial loss + gradient difference loss, CNN+GAN | no inductive bias, raw pixels
+
+* **Eidetic 3D LSTM** (**E3D-LSTM**) | [Eidetic 3D LSTM: A Model for Video Prediction and Beyond](https://openreview.net/forum?id=B1lKS2AqtX) | ICLR 2019 Tsinghua (Yunbo Wang, Li Fei-Fei)
+  * learn good for both short-term and long-term | 3D CNN for local dynamics and recurrent modeling for temporal dependencies, 3D CNN+LSTM | no inductive bias, raw pixels
+
+* ★ **Simple Video Prediction** (**SimVP**) | [SimVP: Simpler yet Better Video Prediction](https://arxiv.org/abs/2206.05099) | CVPR 2022
+  * investigate simple techniques for CNN in video prediction | pure 2D CNN and only MSE loss, CNN | no inductive bias, raw pixels
+
+* **Video Diffusion Models** (**VDM**) | [Video Diffusion Models](https://arxiv.org/abs/2204.03458) | NeurIPS 2022 Google (Jonathan Ho)
   * first video diffusion model for primarily unconditional video generation | diffusion model with 3D U-Net, 3D CNN+diffusion | no inductive bias, raw pixels
 
-* **Masked Conditional Video Diffusion** (**MCVD**) | [MCVD: Masked Conditional Video Diffusion for Prediction, Generation, and Interpolation](https://arxiv.org/abs/2205.09853) | NeurIPS 2022
+* ★ **Masked Conditional Video Diffusion** (**MCVD**) | [MCVD: Masked Conditional Video Diffusion for Prediction, Generation, and Interpolation](https://arxiv.org/abs/2205.09853) | NeurIPS 2022
   * general-purpose as prediction/generation/interpolation | conditioned on masked past or future frames U-Net, CNN+diffusion | no inductive bias, raw pixels
 
 * **Residual Video Diffusion** (**RVD**) | [Diffusion Probabilistic Modeling for Video Generation](https://arxiv.org/abs/2203.09481) | Arxiv 2022
@@ -85,3 +93,27 @@ A curated list of awesome video prediction papers with brief summary.
 
 * **Flexible Diffusion Model** (**FDM**) | [Flexible Diffusion Modeling of Long Videos](https://arxiv.org/abs/2205.11495) | Arxiv 2022
   * deal with long duration coherent prediction | randomly sampling train, 3D CNN+diffusion | no inductive bias, raw pixels
+
+* **Video Transformer** (**VideoTransformer**) | [Scaling Autoregressive Video Models](https://arxiv.org/abs/1906.02634) | ICLR 2020 Google
+  * first Transformer in video prediction | block-local self-attention and spatiotemporal subscaling for reducing memory, Transformer | no inductive bias, raw pixels
+
+* ★ **Latent Video Transformer** (**LVT**) | [Latent Video Transformer](https://arxiv.org/abs/2006.10704) | Arxiv 2020
+  * solve computation requirement problem | VQ-VAE encodes pixels into discrete latent space and VideoTransformer operates in the discrete latent space, Transformer | discrete latent space
+
+* **Convolutional Transformer** (**ConvTransformer**) | [ConvTransformer: A Convolutional Transformer Network for Video Frame Synthesis](https://arxiv.org/abs/2011.10185) | Arxiv 2021
+  * combine CNN and Transformer in video prediction | multi-head convolutional self-attention, Transformer+CNN | no inductive bias, raw pixels
+
+* **Video Generative Pre-Training** (**VideoGPT**) | [VideoGPT: Video Generation using VQ-VAE and Transformers](https://arxiv.org/abs/2104.10157) | Arxiv 2021 UCBerkeley (Pieter Abbeel)
+  * combine GPT and Transformer in video prediction | VQ-VAE encodes pixels into discrete latent space and VideoTransformer operates in the discrete latent space, Transformer | discrete latent space
+
+* **Video Prediction Transformer** (**VPTR**) | [Video Prediction by Efficient Transformers](https://arxiv.org/abs/2212.06026) | ICPR 2022 IVC 2022
+  * solve computation requirement problem and extensive experiments on Transformer autoregressive formats | Pix2Pix autoencoder and VidHRFormer attention, Transformer | latent space
+
+* **Masked Video Transformer** (**MaskViT**) | [MaskViT: Masked Visual Pre-Training for Video Prediction](https://arxiv.org/abs/2206.11894) | ICLR 2023 Stanford (Jiajun Wu, Fei-Fei Li)
+  * mask visual modeling pre-training for video | VQ-GAN quantizing frame and mask visual modeling training, Transformer | discrete latent space
+
+* **MAsked Generative VIdeo Transformer** (**MAGVIT**) | [MAGVIT: Masked Generative Video Transformer](https://arxiv.org/abs/2212.05199) | CVPR 2023 CMU Google
+  * single model for multiple video synthesis tasks | 3D-VQ quantizing video and multi-task mask token modeling training, Transformer | discrete latent space
+
+* **MOtion Scene and Object** (**MOSO**) | [MOSO: Decomposing MOtion, Scene and Object for Video Prediction](https://arxiv.org/abs/2303.03684) | CVPR 2023 CAS
+  * decompose motion, scene and object | separate VQVAE quantizing and Transformer prediction, Transformer | discrete latent space + motion and content separation
